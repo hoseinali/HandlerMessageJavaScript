@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>ExploreWKWebViewJavascript</title>
+      <script type="text/javascript">
+          function login() {
+              var message = {
+                  userName: document.getElementById("userName").value,
+                  password: document.getElementById("password").value
+              };
+              window.webkit.messageHandlers.login.postMessage(message);
+          }
+      </script>
+  </head>
+  <body>
+    <div>LOGIN:</h2>
+        <div>
+          <label for="userName">UserName:</label>
+          <input type="value" id="userName" placeholder="Enter userName" name="userName">
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="value" id="password" placeholder="Enter password" name="password">
+        </div>
+        <button onclick="login()">Login</button>
+    </div>
+  </body>
+</html>
